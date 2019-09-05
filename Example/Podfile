@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JMPageMenu_Example' do
+  pod 'JMPageMenu', :path => '../'
+
+  target 'JMPageMenu_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
