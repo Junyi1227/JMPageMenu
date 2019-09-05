@@ -1,0 +1,6 @@
+framework module JMPageMenu {
+  umbrella header "JMPageMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

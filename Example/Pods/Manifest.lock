@@ -1,0 +1,16 @@
+PODS:
+  - JMPageMenu (0.1.0)
+
+DEPENDENCIES:
+  - JMPageMenu (from `../`)
+
+EXTERNAL SOURCES:
+  JMPageMenu:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JMPageMenu: 3ba275b2480844cc9692e52c26942925821c3b4b
+
+PODFILE CHECKSUM: efbf724ae064bc56a623ff94125f727c9e2abe02
+
+COCOAPODS: 1.7.5
