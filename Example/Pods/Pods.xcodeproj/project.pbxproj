@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		03FDC37EE5795D271AFDF149E4F51978 /* JMPageMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F0B966FE596E89533DC6FA18796798 /* JMPageMenu-dummy.m */; };
-		0B35C9D8C8A1098EC8E928C58F0784F9 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFDE4A118B045A37BB2B1AF94CDCB3 /* ReplaceMe.swift */; };
 		11194125791BC48BB1B94A082994C4F7 /* Pods-JMPageMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA933814F3950C3D33BD4C9A53827E95 /* Pods-JMPageMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AB48DF0B45EF0E983A055628AD7D920 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		4C2A93CF345F4A38EFE3015AF28565BF /* Pods-JMPageMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 260559A0FF354EEB0EE5B05F02174FE9 /* Pods-JMPageMenu_Tests-dummy.m */; };
 		5A7E65DA54EC37CF99C3A065DB18C03A /* JMPageMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 880DBE10E10A77A0B0185E4EDEF15050 /* JMPageMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87BB48CE2320BC630021DCAD /* JMTopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB48C92320BC610021DCAD /* JMTopMenuView.swift */; };
+		87BB48CF2320BC630021DCAD /* JMPageMenuControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB48CA2320BC610021DCAD /* JMPageMenuControl.swift */; };
+		87BB48D02320BC630021DCAD /* JMTopMenuViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB48CB2320BC620021DCAD /* JMTopMenuViewBaseCell.swift */; };
+		87BB48D12320BC630021DCAD /* JMTopMenuViewBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87BB48CC2320BC620021DCAD /* JMTopMenuViewBaseCell.xib */; };
+		87BB48D22320BC630021DCAD /* JMMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB48CD2320BC620021DCAD /* JMMenuConfiguration.swift */; };
 		97523CFB8B5A026B57159CD09CCF02C9 /* Pods-JMPageMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEBBDD8C93E06E23920468330BD1426 /* Pods-JMPageMenu_Example-dummy.m */; };
 		D50397EFAA2FE679F5336583D01CB2A7 /* Pods-JMPageMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FABD47B07571486ACB8276EAE3E56A6 /* Pods-JMPageMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFD69295B3E4484F8BD29CE2DEAA59E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -37,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02F324D81020F2C95F3A011D46E5CFD1 /* JMPageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JMPageMenu.framework; path = JMPageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F324D81020F2C95F3A011D46E5CFD1 /* JMPageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMPageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281B0EA14B1DFDCE57F986104447863 /* Pods-JMPageMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JMPageMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		260559A0FF354EEB0EE5B05F02174FE9 /* Pods-JMPageMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMPageMenu_Tests-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -49,26 +53,30 @@
 		5CBCC305D47F132E0274D1DAAA26E7FA /* Pods-JMPageMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMPageMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5FE6C7A6708BDDFB6D942BA33DDFAAA1 /* Pods-JMPageMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JMPageMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6282BA8D5038D43C98239E9A37EA1DFB /* JMPageMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JMPageMenu.modulemap; sourceTree = "<group>"; };
-		6982E546F390B0AE5593D8E1BB3D973D /* Pods_JMPageMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JMPageMenu_Tests.framework; path = "Pods-JMPageMenu_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6982E546F390B0AE5593D8E1BB3D973D /* Pods_JMPageMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMPageMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1A184808B1498E00F1B4F966748116 /* Pods-JMPageMenu_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JMPageMenu_Tests-Info.plist"; sourceTree = "<group>"; };
+		87BB48C92320BC610021DCAD /* JMTopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMTopMenuView.swift; sourceTree = "<group>"; };
+		87BB48CA2320BC610021DCAD /* JMPageMenuControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMPageMenuControl.swift; sourceTree = "<group>"; };
+		87BB48CB2320BC620021DCAD /* JMTopMenuViewBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMTopMenuViewBaseCell.swift; sourceTree = "<group>"; };
+		87BB48CC2320BC620021DCAD /* JMTopMenuViewBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMTopMenuViewBaseCell.xib; sourceTree = "<group>"; };
+		87BB48CD2320BC620021DCAD /* JMMenuConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMMenuConfiguration.swift; sourceTree = "<group>"; };
 		880DBE10E10A77A0B0185E4EDEF15050 /* JMPageMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMPageMenu-umbrella.h"; sourceTree = "<group>"; };
 		8E7D8939AF57EDD54BAC475FD7F72FA2 /* Pods-JMPageMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JMPageMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		8EDFDE4A118B045A37BB2B1AF94CDCB3 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = JMPageMenu/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		9657C7B29DEA6774F80B272762A49642 /* Pods-JMPageMenu_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JMPageMenu_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4B1E422AE5C3AA6C8111EAC023D9E07 /* Pods-JMPageMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JMPageMenu_Example.modulemap"; sourceTree = "<group>"; };
 		B765BC6DE011FE1BE25E7B5263F65E8A /* Pods-JMPageMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMPageMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BCAED7BAE88861600AB2E096F447EAE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BCAED7BAE88861600AB2E096F447EAE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE7D8D28EC813A4FC96A0ED48EAC8483 /* Pods-JMPageMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JMPageMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C9269A97CEC6F2E2255CC65367600F20 /* JMPageMenu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JMPageMenu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C9269A97CEC6F2E2255CC65367600F20 /* JMPageMenu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JMPageMenu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CF39E323516D2C46BB2615CA4E9777F6 /* JMPageMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMPageMenu.xcconfig; sourceTree = "<group>"; };
-		D1C11C98C92892DCA8538FAF1EF84CCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D1C11C98C92892DCA8538FAF1EF84CCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D594177D8279955C6AB2527A0714B3A9 /* JMPageMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JMPageMenu-Info.plist"; sourceTree = "<group>"; };
 		DDEBBDD8C93E06E23920468330BD1426 /* Pods-JMPageMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMPageMenu_Example-dummy.m"; sourceTree = "<group>"; };
 		E0F6DE2E2BFCBEBE6ED65D3274A4E15E /* JMPageMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMPageMenu-prefix.pch"; sourceTree = "<group>"; };
 		E5F0B966FE596E89533DC6FA18796798 /* JMPageMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMPageMenu-dummy.m"; sourceTree = "<group>"; };
 		EA933814F3950C3D33BD4C9A53827E95 /* Pods-JMPageMenu_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JMPageMenu_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F11601DEDAFFE6B9BB980F823820E2FA /* Pods_JMPageMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JMPageMenu_Example.framework; path = "Pods-JMPageMenu_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11601DEDAFFE6B9BB980F823820E2FA /* Pods_JMPageMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMPageMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +144,11 @@
 		51D6AE3686734BA6CBEC88D076A633F9 /* JMPageMenu */ = {
 			isa = PBXGroup;
 			children = (
-				8EDFDE4A118B045A37BB2B1AF94CDCB3 /* ReplaceMe.swift */,
+				87BB48CD2320BC620021DCAD /* JMMenuConfiguration.swift */,
+				87BB48CA2320BC610021DCAD /* JMPageMenuControl.swift */,
+				87BB48C92320BC610021DCAD /* JMTopMenuView.swift */,
+				87BB48CB2320BC620021DCAD /* JMTopMenuViewBaseCell.swift */,
+				87BB48CC2320BC620021DCAD /* JMTopMenuViewBaseCell.xib */,
 				8603EE213DEE42C2CD0F8FEEAEED9729 /* Pod */,
 				C765804C68338A64247B44605FE1EB3E /* Support Files */,
 			);
@@ -347,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BB48D12320BC630021DCAD /* JMTopMenuViewBaseCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,8 +393,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BB48CF2320BC630021DCAD /* JMPageMenuControl.swift in Sources */,
 				03FDC37EE5795D271AFDF149E4F51978 /* JMPageMenu-dummy.m in Sources */,
-				0B35C9D8C8A1098EC8E928C58F0784F9 /* ReplaceMe.swift in Sources */,
+				87BB48D02320BC630021DCAD /* JMTopMenuViewBaseCell.swift in Sources */,
+				87BB48D22320BC630021DCAD /* JMMenuConfiguration.swift in Sources */,
+				87BB48CE2320BC630021DCAD /* JMTopMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +569,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JMPageMenu/JMPageMenu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JMPageMenu/JMPageMenu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JMPageMenu/JMPageMenu.modulemap";
 				PRODUCT_MODULE_NAME = JMPageMenu;
@@ -561,7 +577,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -584,7 +600,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JMPageMenu/JMPageMenu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JMPageMenu/JMPageMenu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JMPageMenu/JMPageMenu.modulemap";
 				PRODUCT_MODULE_NAME = JMPageMenu;
@@ -592,7 +608,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -653,8 +669,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

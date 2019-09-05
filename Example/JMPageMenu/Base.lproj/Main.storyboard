@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O64-wS-UHK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="gMx-31-cDU">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="JMPageMenu_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <viewController id="O64-wS-UHK" customClass="ViewController" customModule="ScrollPageMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frc-Ae-ATq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-Cq-cKR" customClass="JMTopMenuView" customModule="JMPageMenu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Kcx-fS-c8Y"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsI-qY-3D4">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gk2-Cq-cKR" firstAttribute="leading" secondItem="bhG-FZ-rrV" secondAttribute="leading" id="C7e-Ce-rvb"/>
+                            <constraint firstItem="qsI-qY-3D4" firstAttribute="top" secondItem="Gk2-Cq-cKR" secondAttribute="bottom" id="GGc-GQ-v3D"/>
+                            <constraint firstItem="Gk2-Cq-cKR" firstAttribute="top" secondItem="bhG-FZ-rrV" secondAttribute="top" id="Ke4-Ak-CRX"/>
+                            <constraint firstItem="bhG-FZ-rrV" firstAttribute="trailing" secondItem="qsI-qY-3D4" secondAttribute="trailing" id="ZJS-JD-LWL"/>
+                            <constraint firstItem="bhG-FZ-rrV" firstAttribute="bottom" secondItem="qsI-qY-3D4" secondAttribute="bottom" id="jaG-RW-77O"/>
+                            <constraint firstItem="qsI-qY-3D4" firstAttribute="leading" secondItem="bhG-FZ-rrV" secondAttribute="leading" id="oLj-Cl-ezK"/>
+                            <constraint firstItem="bhG-FZ-rrV" firstAttribute="trailing" secondItem="Gk2-Cq-cKR" secondAttribute="trailing" id="xre-KZ-L5a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bhG-FZ-rrV"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="qsI-qY-3D4" id="1Hd-Pb-H42"/>
+                        <outlet property="topView" destination="Gk2-Cq-cKR" id="9OD-K6-gv7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLb-3P-3YM" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
